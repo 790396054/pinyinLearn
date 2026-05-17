@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open *)",
+      "Bash(node *)",
+      "WebSearch",
+      "Bash(DASHSCOPE_API_KEY=\"sk-bd1c773a9250472cad8fc0bcc3f9cc59\" node *)",
+      "Bash(curl -s -w '\\\\nHTTP_CODE: %{http_code}' https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis -H 'Authorization: Bearer sk-bd1c773a9250472cad8fc0bcc3f9cc59' -H 'Content-Type: application/json' -d '{\"model\":\"wanx-v1\",\"input\":{\"prompt\":\"一只可爱的小猫，卡通风格\"},\"parameters\":{\"size\":\"1024*1024\",\"n\":1}}')",
+      "Bash(curl -s -w '\\\\nHTTP_CODE: %{http_code}' https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis -H 'Authorization: Bearer sk-bd1c773a9250472cad8fc0bcc3f9cc59' -H 'Content-Type: application/json' -d '{\"model\":\"wanx2.0-t2i-turbo\",\"input\":{\"prompt\":\"一只可爱的小猫，卡通风格\"},\"parameters\":{\"size\":\"1024*1024\",\"n\":1}}')",
+      "Bash(curl -s -o /tmp/test_ma1.mp3 \"https://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=3&text=%E5%A6%88\")",
+      "Bash(curl -s -o /tmp/test_ma2.mp3 \"https://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=3&text=%E9%BA%BB\")",
+      "Bash(curl -s -o /tmp/test_ma3.mp3 \"https://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=3&text=%E9%A9%AC\")",
+      "Bash(curl -s -o /tmp/test_ma4.mp3 \"https://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=3&text=%E9%AA%82\")",
+      "Read(//private/tmp/**)",
+      "Bash(afplay /tmp/test_ma1.mp3)",
+      "Bash(afplay /tmp/test_ma2.mp3)",
+      "Bash(afplay /tmp/test_ma3.mp3)",
+      "Bash(afplay /tmp/test_ma4.mp3)",
+      "Bash(curl -sL https://api.github.com/repos/vercel-labs/skills/contents/skills)",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(f['name']\\) for f in data]\")",
+      "Bash(curl -s -o /tmp/g_ma1.mp3 \"https://translate.google.com/translate_tts?ie=UTF-8&tl=zh-CN&client=tw-ob&q=%E5%A6%88\")",
+      "Bash(curl -s -o /tmp/g_ma2.mp3 \"https://translate.google.com/translate_tts?ie=UTF-8&tl=zh-CN&client=tw-ob&q=%E9%BA%BB\")",
+      "Bash(curl -s -o /tmp/g_ma3.mp3 \"https://translate.google.com/translate_tts?ie=UTF-8&tl=zh-CN&client=tw-ob&q=%E9%A9%AC\")",
+      "Bash(curl -s -o /tmp/g_ma4.mp3 \"https://translate.google.com/translate_tts?ie=UTF-8&tl=zh-CN&client=tw-ob&q=%E9%AA%82\")",
+      "Bash(curl -s --max-time 10 \"https://translate.google.com/translate_tts?ie=UTF-8&tl=zh-CN&client=tw-ob&q=%E7%8C%AB\" -o /tmp/cat_tts.mp3)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -w '\\\\nHTTP: %{http_code}' https://dashscope.aliyuncs.com/api/v1/services/aigc/text2speech/tts -H 'Authorization: Bearer sk-bd1c773a9250472cad8fc0bcc3f9cc59' -H 'Content-Type: application/json' -d '{\"model\":\"cosyvoice-01\",\"input\":{\"text\":\"小猫\"},\"parameters\":{\"format\":\"mp3\",\"sample_rate\":24000}}')",
+      "Bash(curl -s https://dashscope.aliyuncs.com/api/v1/services/aigc/text2speech/tts -H 'Authorization: Bearer sk-bd1c773a9250472cad8fc0bcc3f9cc59' -H 'Content-Type: application/json' -d '{\"model\":\"cosyvoice-v1\",\"input\":{\"text\":\"小猫\"},\"parameters\":{\"format\":\"mp3\",\"sample_rate\":24000}}')",
+      "Bash(python3 -m json.tool)",
+      "Bash(python3 -c \"import edge_tts; print\\('edge-tts OK'\\)\")",
+      "Bash(pip install *)"
+    ]
+  }
+}
